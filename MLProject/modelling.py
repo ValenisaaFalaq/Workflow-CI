@@ -8,7 +8,7 @@ import mlflow
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # MANTRA SAKTI: Paksa simpan ke folder mlruns lokal
-mlflow.set_tracking_uri("file:./mlruns")
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
 
 def train_base_model():
     df = pd.read_csv('MLProject/dataset_preprocessing.csv')
