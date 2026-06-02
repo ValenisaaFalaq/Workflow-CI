@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 mlflow.set_tracking_uri("file:./mlruns")
 
 def train_base_model():
-    df = pd.read_csv('Workflow-CI/MLProject/dataset_preprocessing.csv')
+    df = pd.read_csv('MLProject/dataset_preprocessing.csv')
     X = df.drop(columns=['Response']) 
     y = df['Response']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
