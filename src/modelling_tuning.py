@@ -11,8 +11,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# MANTRA SAKTI: Paksa simpan ke folder mlruns lokal
-mlflow.set_tracking_uri("file:./mlruns")
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
 
 os.makedirs("src/artifacts", exist_ok=True)
 os.makedirs("src/models", exist_ok=True)
